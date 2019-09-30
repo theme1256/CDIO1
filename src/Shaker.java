@@ -1,14 +1,10 @@
-public class Shaker {
+class Shaker {
     private static Dice[] dices;
 
-    public static void main(String[] args) {
-    }
-
-    void setup(int count) {
+    Shaker(int count) {
         dices = new Dice[count];
         for (int i = 0; i < count; i++) {
             dices[i] = new Dice();
-            dices[i].setup();
         }
     }
     

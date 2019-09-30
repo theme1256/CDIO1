@@ -1,17 +1,17 @@
-import gui_fields.GUI_Field;
 import gui_main.GUI;
 import gui_fields.GUI_Player;
 
-public class Player {
+class Player {
     private static GUI_Player player;
 
-    public static void main(String[] args) {
+    Player(GUI gui) {
+        String playerName = gui.getUserString("Indtast et navn");
+        player = new GUI_Player(playerName,0);
+        gui.addPlayer(player);
     }
 
-    void setup(GUI gui) {
-        String spillernavn = gui.getUserString("Indtast et navn");
-        player = new GUI_Player(spillernavn,0);
-        gui.addPlayer(player);
+    GUI_Player export() {
+        return player;
     }
 
     void addToScore(int added) {
