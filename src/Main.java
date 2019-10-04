@@ -24,8 +24,10 @@ public class Main {
         while(!winnerFound) {
             for(int i = 0; i < numberOfPlayers; i++) {
                 System.out.println(players[0]);
+                System.out.println(players[0].export());
                 System.out.println(players[0].getName());
                 System.out.println(players[1]);
+                System.out.println(players[1].export());
                 System.out.println(players[1].getName());
                 gui.showMessage("Nu er det " + players[i].getName() + "'s tur. "+i);
                 gui.getUserButtonPressed("Klar til at rulle?", "Rul!");

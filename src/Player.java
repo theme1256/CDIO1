@@ -6,24 +6,24 @@ class Player {
 
     Player(GUI gui) {
         String playerName = gui.getUserString("Indtast et navn");
-        player = new GUI_Player(playerName,0);
-        gui.addPlayer(player);
+        this.player = new GUI_Player(playerName,0);
+        gui.addPlayer(this.player);
     }
 
     GUI_Player export() {
-        return player;
+        return this.player;
     }
 
     void addToScore(int added) {
-        int temp = player.getBalance();
-        player.setBalance(temp + added);
+        int temp = this.player.getBalance();
+        this.player.setBalance(temp + added);
     }
 
     int getScore() {
-        return player.getBalance();
+        return this.player.getBalance();
     }
 
     String getName() {
-        return player.getName();
+        return this.player.getName();
     }
 }
